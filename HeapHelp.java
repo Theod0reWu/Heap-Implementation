@@ -40,12 +40,11 @@ public class HeapHelp{
 				}
 				else {
 					beforeSpace = SPACES.substring(0,avg);
+					if (secondIndex < avg){throw new IllegalArgumentException("sorry one of your numbers is too big and too far down the tree");}
 					afterSpace = SPACES.substring(0,secondIndex - avg);
 				}
-				//if (afterSpace.length() == 0){beforeSpace+=" " + SPACES.substring(0,(num+"").length()/2);}
 				String newPart = beforeSpace + num + afterSpace;
 				lastRow += newPart;
-				//if (secondIndex+1 < edge.length()) {edge = edge.substring(secondIndex+1);}
 				if (newPart.length() < edge.length()) {edge = edge.substring(newPart.length());}
 				else {edge = "";}
 			}
