@@ -44,6 +44,8 @@ public class HeapHelp{
 					afterSpace = SPACES.substring(0,secondIndex - avg);
 				}
 				String newPart = beforeSpace + num + afterSpace;
+				int secondSlash = edge.indexOf("/") + edge.substring(edge.indexOf("/")+1).indexOf("/") + 1;
+				if (newPart.length() > secondSlash){newPart = beforeSpace + num + " ";}
 				lastRow += newPart;
 				if (newPart.length() < edge.length()) {edge = edge.substring(newPart.length());}
 				else {edge = "";}
